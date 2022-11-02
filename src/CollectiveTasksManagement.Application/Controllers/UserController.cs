@@ -1,3 +1,4 @@
+using CollectiveTasksManagement.Domain.Commands;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CollectiveTasksManagement.Application.Controllers
@@ -17,6 +18,12 @@ namespace CollectiveTasksManagement.Application.Controllers
         public IActionResult GetAll()
         {
             return Ok("Hello World");
+        }
+
+        [HttpPost]
+        public IActionResult Create([FromBody] CreateUserCommand command)
+        {
+            return Ok(command);
         }
     }
 }

@@ -1,25 +1,29 @@
+using CollectiveTasksManagement.Infrastructure.CrossCutting.IoC;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+// Validators
+_ = builder.Services.AddValidators();
+
+_ = builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+_ = builder.Services.AddEndpointsApiExplorer();
+_ = builder.Services.AddSwaggerGen();
+_ = builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    _ = app.UseSwagger();
+    _ = app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+_ = app.UseHttpsRedirection();
+_ = app.UseAuthorization();
+_ = app.MapControllers();
 
 app.Run();
