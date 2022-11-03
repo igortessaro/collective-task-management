@@ -73,7 +73,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          ./.sonar/scanner/dotnet-sonarscanner begin /k:"igortessaro_adventureworks-person" /o:"igortessaro" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          ./.sonar/scanner/dotnet-sonarscanner begin /k:"igortessaro_collective-task-management" /o:"igortessaro" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build --configuration Release --no-restore ./src/CollectiveTasksManagement.sln
           dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -l trx ./src/CollectiveTasksManagement.Domain.Tests/CollectiveTasksManagement.Domain.Tests.csproj
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
