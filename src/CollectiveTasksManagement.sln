@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectiveTasksManagement.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectiveTasksManagement.Infrastructure.CrossCutting", "CollectiveTasksManagement.Infrastructure.CrossCutting\CollectiveTasksManagement.Infrastructure.CrossCutting.csproj", "{F0755E96-D50B-42F6-8D33-585333FB82B5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-tests", "04-tests", "{1C605472-37D9-49E1-B9CC-4A887D218B5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectiveTasksManagement.Domain.Tests", "CollectiveTasksManagement.Domain.Tests\CollectiveTasksManagement.Domain.Tests.csproj", "{7DB93AC7-AB10-4320-90EF-A2A6BCEA88B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,11 +46,16 @@ Global
 		{F0755E96-D50B-42F6-8D33-585333FB82B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0755E96-D50B-42F6-8D33-585333FB82B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0755E96-D50B-42F6-8D33-585333FB82B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DB93AC7-AB10-4320-90EF-A2A6BCEA88B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DB93AC7-AB10-4320-90EF-A2A6BCEA88B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DB93AC7-AB10-4320-90EF-A2A6BCEA88B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DB93AC7-AB10-4320-90EF-A2A6BCEA88B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1DDA0150-05A2-4C7A-B75B-96CD42D2DABD} = {4721CBFD-517D-407D-80ED-8B9DF6D31D81}
 		{C1B69AFC-7221-464A-86C3-34B411C1C4E2} = {5934C279-4A89-409A-A8A0-B59D32D9E12E}
 		{8041388A-E393-4C0C-800A-81E084838DC4} = {4463EC85-5E04-4EE8-B4E8-6FE197874C17}
 		{F0755E96-D50B-42F6-8D33-585333FB82B5} = {5934C279-4A89-409A-A8A0-B59D32D9E12E}
+		{7DB93AC7-AB10-4320-90EF-A2A6BCEA88B7} = {1C605472-37D9-49E1-B9CC-4A887D218B5C}
 	EndGlobalSection
 EndGlobal
