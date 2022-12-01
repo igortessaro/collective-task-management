@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "igortessaro",
+        "projectKey": "igortessaro_collective-task-management"
+    }
+}

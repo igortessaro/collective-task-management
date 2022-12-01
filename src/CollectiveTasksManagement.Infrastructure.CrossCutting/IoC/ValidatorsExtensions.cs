@@ -12,6 +12,7 @@ public static class ValidatorsExtensions
     {
         _ = services.AddFluentValidationAutoValidation();
         _ = services.AddScoped<IValidator<CreateUserCommand>, CreateUserValidator>();
+        _ = services.AddScoped<IValidator<CreateTargetGoalsCommand>, CreateTargetGoalsValidator>();
 
         return services;
     }

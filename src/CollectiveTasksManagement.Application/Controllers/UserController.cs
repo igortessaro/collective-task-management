@@ -1,29 +1,28 @@
 using CollectiveTasksManagement.Domain.Commands;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CollectiveTasksManagement.Application.Controllers
+namespace CollectiveTasksManagement.Application.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public sealed class UserController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UserController : ControllerBase
+    private readonly ILogger<UserController> _logger;
+
+    public UserController(ILogger<UserController> logger)
     {
-        private readonly ILogger<UserController> _logger;
+        _logger = logger;
+    }
 
-        public UserController(ILogger<UserController> logger)
-        {
-            _logger = logger;
-        }
+    [HttpGet]
+    public IActionResult GetAll()
+    {
+        return Ok("Hello World");
+    }
 
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            return Ok("Hello World");
-        }
-
-        [HttpPost]
-        public IActionResult Create([FromBody] CreateUserCommand command)
-        {
-            return Ok(command);
-        }
+    [HttpPost]
+    public IActionResult Create([FromBody] CreateUserCommand command)
+    {
+        return Ok(command);
     }
 }
